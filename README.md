@@ -1,0 +1,4 @@
+NoSpeedDial
+===========
+
+NoSpeedDial Chrome Extension
