@@ -1,0 +1,33 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "blank.html"
+   },
+ 
+   "description": "NoSpeedDial - open a new tab without Speed Dial",
+
+   "manifest_version": 2,
+   "name": "No Speed Dial",
+  
+   "permissions": ["tabs", "webRequest"],
+
+
+    "content_scripts":[
+        {
+            "matches":["http://nenkfddcinieejhaipddbmdpkhajbpff/*"],
+            "js":["noSpeedDial_cs.js","jquery-1.11.0.js"],
+            "css":["aboutHome.css"]
+        }
+    ],
+
+    "background":{
+        "scripts":["noSpeedDial_bg.js","jquery-1.11.0.js"]
+    },
+	
+	"icons":
+    {
+        "128" :"no_entry.png"
+    },
+  
+   "version": "2.0.4"
+
+}
