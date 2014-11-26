@@ -1,30 +1,30 @@
 
 html {
-  font: message-box;
-  font-size: 100%;
-  background-color: hsl(0,0%,95%);
-  color: #000;
-  height: 100%;
+    font: message-box;
+    font-size: 100%;
+    background-color: hsl(0, 0%, 95%);
+    color: #000;
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    width: 100%;
+    height: 100%;
 }
 
-
 #launcher {
-  display: -moz-box;
-  -moz-box-align: center;
-  -moz-box-pack: center;
-  width: 100%;
-  background-color: hsla(0,0%,0%,.03);
-  border-top: 1px solid hsla(0,0%,0%,.03);
-  box-shadow: 0 1px 2px hsla(0,0%,0%,.02) inset,
-              0 -1px 0 hsla(0,0%,100%,.25);
+    font-size: 15pt;
+    display: -moz-box;
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, .03);
+    border-top: 1px solid hsla(0, 0%, 0%, .03);
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, .02) inset,
+    0 -1px 0 hsla(0, 0%, 100%, .25);
 }
 
 #bottomLauncher {
@@ -33,96 +33,100 @@ body {
     -moz-box-pack: center;
     height: 50px;
     width: 100%;
-    background-color: hsla(0,0%,0%,.03);
-    border-top: 1px solid hsla(0,0%,0%,.03);
-    box-shadow: 0 1px 2px hsla(0,0%,0%,.02) inset,
-    0 -1px 0 hsla(0,0%,100%,.25);
+    background-color: hsla(0, 0%, 0%, .03);
+    border-top: 1px solid hsla(0, 0%, 0%, .03);
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, .02) inset,
+    0 -1px 0 hsla(0, 0%, 100%, .25);
 }
 
 #logoMain {
 
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin:-75px 0 0 -135px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -135px;
 }
 
 #launcher:not([session]),
 body[narrow] #launcher[session] {
-  display: block; /* display separator and restore button on separate lines */
-  text-align: center;
-  white-space: nowrap; /* prevent navigational buttons from wrapping */
+    display: block; /* display separator and restore button on separate lines */
+    text-align: center;
+    white-space: nowrap; /* prevent navigational buttons from wrapping */
 }
 
 .launchButton {
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  margin: 16px 1px;
-  padding: 14px 6px;
-  min-width: 88px;
-  max-width: 176px;
-  max-height: 85px;
-  vertical-align: top;
-  white-space: normal;
-  background: transparent padding-box;
-  border: 1px solid transparent;
-  border-radius: 2.5px;
-  color: #525c66;
-  font-size: 75%;
-  cursor: pointer;
-  transition-property: background-color, border-color, box-shadow;
-  transition-duration: 150ms;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    margin: 16px 1px;
+    padding: 14px 6px;
+    min-width: 88px;
+    max-width: 176px;
+    max-height: 85px;
+    vertical-align: top;
+    white-space: normal;
+    background: transparent padding-box;
+    border: 1px solid transparent;
+    border-radius: 2.5px;
+    color: #525c66;
+    font-size: 75%;
+    cursor: pointer;
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: 150ms;
 }
 
 body[narrow] #launcher[session] > .launchButton {
-  margin: 4px 1px;
+    margin: 4px 1px;
 }
 
 .launchButton:hover {
-  background-color: hsla(211,79%,6%,.03);
-  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2);
+    background-color: hsla(211, 79%, 6%, .03);
+    border-color: hsla(210, 54%, 20%, .15) hsla(210, 54%, 20%, .17) hsla(210, 54%, 20%, .2);
 }
 
 .launchButton:hover:active {
-  background-image: linear-gradient(hsla(211,79%,6%,.02), hsla(211,79%,6%,.05));
-  border-color: hsla(210,54%,20%,.2) hsla(210,54%,20%,.23) hsla(210,54%,20%,.25);
-  box-shadow: 0 1px 1px hsla(211,79%,6%,.05) inset,
-              0 0 1px hsla(211,79%,6%,.1) inset;
-  transition-duration: 0ms;
+    background-image: linear-gradient(hsla(211, 79%, 6%, .02), hsla(211, 79%, 6%, .05));
+    border-color: hsla(210, 54%, 20%, .2) hsla(210, 54%, 20%, .23) hsla(210, 54%, 20%, .25);
+    box-shadow: 0 1px 1px hsla(211, 79%, 6%, .05) inset,
+    0 0 1px hsla(211, 79%, 6%, .1) inset;
+    transition-duration: 0ms;
 }
 
 .launchButton[hidden],
 #launcher:not([session]) > #restorePreviousSessionSeparator,
 #launcher:not([session]) > #restorePreviousSession {
-  display: none;
+    display: none;
 }
 
 .launchButton::before {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto 6px;
-  line-height: 0; /* remove extra vertical space due to non-zero font-size */
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 6px;
+    line-height: 0; /* remove extra vertical space due to non-zero font-size */
 }
 
 #downloads::before {
-  content: url("downloads.png");
+    content: url("downloads.png");
 }
 
 #bookmarks::before {
-  content: url("bookmarks.png");
+    content: url("bookmarks.png");
 }
 
 #history::before {
-  content: url("history.png");
+    content: url("history.png");
 }
 
 #extensions::before {
-  content: url("addons.png");
+    content: url("addons.png");
+}
+
+#apps::before {
+    content: url("apps.png");
 }
 
 #settings::before {
-  content: url("settings.png");
+    content: url("settings.png");
 }
 
 

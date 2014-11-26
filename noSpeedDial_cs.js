@@ -26,6 +26,10 @@ $( document ).ready(function () {
         openLocalResource("extensions");
     });
 
+    $('#apps').click(function () {
+        openLocalResource("apps");
+    });
+
     $('#settings').click(function () {
         openLocalResource("settings");
     });

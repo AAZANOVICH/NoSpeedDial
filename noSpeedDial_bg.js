@@ -1,15 +1,3 @@
-chrome.webRequest.onBeforeRequest.addListener(
-    function(details) {
-		     alert('1');   
-		 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		  alert('2');   
-			chrome.tabs.update(tabs[0].id, {'url': 'chrome://history'}); 
-		 };
-		
-        return null;
-    }
-);
-
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 
@@ -27,6 +15,10 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 
     if(changeInfo.url == "http://nenkfddcinieejhaipddbmdpkhajbpff/chrome/extensions") {
         chrome.tabs.update(tabId, {'url': 'chrome://extensions'});
+    }
+
+    if(changeInfo.url == "http://nenkfddcinieejhaipddbmdpkhajbpff/chrome/apps") {
+        chrome.tabs.update(tabId, {'url': 'chrome://apps'});
     }
 
     if(changeInfo.url == "http://nenkfddcinieejhaipddbmdpkhajbpff/chrome/settings") {
