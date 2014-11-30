@@ -6,17 +6,33 @@
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>New Tab</title>
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="noSpeedDial_cs.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="newtab.js"></script>
+
+    <script src="identicon.js"></script>
+    <script src="pnglib.js"></script>
+    <script src="sha.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="newtab.css" />
+    <link href="bootstrap.min.css" rel="stylesheet">
 
 
     <link rel="stylesheet" type="text/css" media="all"
           href="aboutHome.css"/>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  <!--  <link href="general_foundicons.css" rel="stylesheet">-->
+
 </head>
 
 <body>
+
 <div id="launcher">
     <button class="launchButton" id="downloads">Downloads</button>
     <button class="launchButton" id="bookmarks">Bookmarks</button>
@@ -25,8 +41,89 @@
     <button class="launchButton" id="apps">Applications</button>
     <button class="launchButton" id="settings">Settings</button>
 </div>
-<div id="logo" class="logoMain" style="position: relative; top: 25%; text-align: center">
-    <img src="chrome.gif">
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption" style="vertical-align: top">
+                    <img src="chrome.gif">
+                </div>
+            </div>
+        </div>
+        <div class="item active">
+            <div class="container">
+                <br/>
+                <h1 style="text-align: center">Quick Access</h1>
+                <div class="carousel-caption">
+
+                  <!--  <h1>Another example headline.</h1>
+
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+                    <div id="content">
+                        <div id="dial"></div>
+                        <div class="modal fade" id="quickAccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-vertical-centered modal-horizontal-centered">
+                                <div class="modal-content" style="width: 380px">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Edit Quick Link</h4>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <!-- The form is placed inside the body of modal -->
+                                        <form id="editQuickLinkForm" class="form-horizontal">
+                                            <input type="hidden" id="editQuickLinkFormIndex"/>
+                                            <div class="form-group">
+                                               <!-- <label class="col-sm-3 control-label">Display Name</label>-->
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="editQuickLinkFormDisplayName" style="width: 350px" maxlength="20">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                               <!-- <label class="col-sm-3 control-label">URL</label>-->
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="editQuickLinkFormUrl" style="width: 350px"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-5 col-sm-offset-3">
+                                                    <button type="button" class="btn btn-default glyphicon glyphicon-check" id="editQuickLinkFormSaveBtn" >Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="options"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+        <span class="glyphicon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
+
+
+
 </body>
 </html>

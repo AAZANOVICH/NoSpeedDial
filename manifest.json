@@ -6,8 +6,8 @@
       "newtab": "blank.html"
    },
    "content_scripts": [ {
-      "css": [ "aboutHome.css" ],
-      "js": [ "noSpeedDial_cs.js", "jquery-1.11.1.min.js" ],
+      "css": [ "aboutHome.css","newtab.css" ],
+      "js": [ "noSpeedDial_cs.js", "jquery-1.11.1.min.js", "newtab.js" ],
       "matches": [ "http://nenkfddcinieejhaipddbmdpkhajbpff/*" ]
    } ],
    "description": "NoSpeedDial - open a new tab without Speed Dial",
@@ -16,6 +16,6 @@
    },
    "manifest_version": 2,
    "name": "No Speed Dial",
-   "permissions": [ "tabs" ],
+   "permissions": [ "tabs","storage" ],
    "version": "2.0.5"
 }
