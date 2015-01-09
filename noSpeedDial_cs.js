@@ -7,7 +7,7 @@
 $( document ).ready(function () {
 
     function openLocalResource(resName) {
-        window.location= "http://nenkfddcinieejhaipddbmdpkhajbpff/chrome/" + resName;
+        chrome.runtime.sendMessage({ action: resName });
     }
 
     $('#downloads').click(function () {
